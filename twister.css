@@ -1192,7 +1192,7 @@ body.o #typora-sidebar .ty-search-item-line {
 }
 
 #typora-sidebar .file-tree-node .file-node-icon.fa-folder {
-  background-image: url("./twister/icons/cd-dualtone-folder-closed.svg");
+  background-image: url("./twister/icons/folder.svg");
   margin-top: 0.5rem;
 }
 
@@ -1200,7 +1200,7 @@ body.o #typora-sidebar .ty-search-item-line {
   .file-tree-node.file-node-collapsed
   > .file-node-content
   > .file-node-icon.fa-folder {
-  background-image: url("./twister/icons/cd-dualtone-folder-closed.svg");
+  background-image: url("./twister/icons/folder.svg");
   margin-top: 0.5rem;
 }
 
@@ -1208,7 +1208,7 @@ body.o #typora-sidebar .ty-search-item-line {
   .file-tree-node.file-node-expanded
   > .file-node-content
   > .file-node-icon.fa-folder {
-  background-image: url("./twister/icons/cd-dualtone-folder-open.svg");
+  background-image: url("./twister/icons/folder.fill.svg");
   margin-top: 0.5rem;
 }
 
@@ -1216,7 +1216,7 @@ body.o #typora-sidebar .ty-search-item-line {
   .file-tree-node
   > .file-node-content
   > .file-node-icon.fa-file-text-o {
-  background-image: url("./twister/icons/cd-dualtone-file.svg");
+  background-image: url("./twister/icons/document.svg");
   margin-top: 0.5rem;
 }
 
@@ -1224,7 +1224,7 @@ body.o #typora-sidebar .ty-search-item-line {
   .file-tree-node.active
   > .file-node-content
   > .file-node-icon.fa-file-text-o {
-  background-image: url("./twister/icons/cd-dualtone-file-selected.svg");
+  background-image: url("./twister/icons/document.fill.svg");
   margin-top: 0.5rem;
 }
 
