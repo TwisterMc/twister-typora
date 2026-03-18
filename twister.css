@@ -227,9 +227,7 @@ header,
 }
 
 .sidebar-tab {
-  text-transform: none;
   font-weight: 700;
-  font-size: 1.1em;
 }
 
 /* ── Headings ── colored for visual hierarchy ────────────────── */
@@ -1096,7 +1094,7 @@ body.o #typora-sidebar .ty-search-item-line {
 #typora-sidebar .file-tree-node {
   padding: 0;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 0.875rem;
   margin-left: 0.8rem;
 }
 
