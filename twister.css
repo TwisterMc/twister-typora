@@ -1,0 +1,1148 @@
+/* =============================================================
+   macOS Dark
+   ============================================================= */
+
+:root {
+  /* system-ui is first so the browser picks the OS default; fallbacks include both Apple and cross-platform families */
+  --font-system: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-mono:   "SF Mono", "Menlo", "Monaco", "Courier New", monospace;
+  --monospace:   var(--font-mono);
+
+  /* Accents */
+  --accent-blue:   #0a84ff;
+  --accent-green:  #30d158;
+  --accent-orange: #ff9f0a;
+  --accent-pink:   #ff375f;
+  --accent-purple: #bf5af2;
+  --accent-teal:   #5ac8fa;
+  --accent-yellow: #ffd60a;
+
+  /* Backgrounds */
+  --bg-code:        #2a2a2c;
+  --bg-code-block:  #2c2c2e;
+  --bg-editor:      var(--bg-window);
+  --bg-hover:       #323234;
+  --bg-panel:       var(--bg-secondary);
+  --bg-popover:     var(--bg-secondary);
+  --bg-quote:       #242426;
+  --bg-secondary:   #2c2c2e;
+  --bg-selection:   rgba(140, 196, 253, 0.5);
+  --bg-sidebar-hover: #3a3a3c;
+  --bg-sidebar-selection: #4a4a4e;
+  --bg-sidebar:     #2c2c2e;
+  --bg-table-alt:   #232325;
+  --bg-window:      #1c1c1e;
+
+  /* Borders */
+  --border:         #38383a;
+  --border-light:   var(--bg-secondary);
+  --h1-border:      var(--h1-color);
+  --h2-border:      var(--h2-color);
+
+  /* Text */
+  --cursor-color:   var(--accent-blue);
+  --mark-text:      #1a1a1a;
+  --text-code:      #e8e8ed;
+  --text-dim:       #6c6c70;
+  --text-muted:     #8e8e93;
+  --text-primary:   #f5f5f7;
+  --text-secondary: #c7c7cc;
+  --text-source:    #b8bfc6;
+
+  /* Heading accent colors — macOS system palette */
+  --h1-color:  var(--accent-pink);   /* systemPink  — bold, prominent */
+  --h2-color:  var(--accent-blue);   /* systemBlue  */
+  --h3-color:  var(--accent-teal);   /* systemTeal  */
+  --h4-color:  var(--accent-green);  /* systemGreen */
+  --h5-color:  var(--accent-orange); /* systemOrange */
+  --h6-color:  var(--accent-purple); /* systemPurple */
+
+  /* Source mode syntax colors (CodeMirror) */
+  --source-atom: #84b6cb;
+  --source-attribute: #7575e4;
+  --source-bracket: #997;
+  --source-builtin: #f3b3f8;
+  --source-comment: #da924a;
+  --source-cursor: var(--text-source);
+  --source-header: #8d8df0;
+  --source-hr: #d8d5d5;
+  --source-keyword: #c88fd0;
+  --source-link: #d3d3ef;
+  --source-meta: #b7b3b3;
+  --source-negative: #d95050;
+  --source-number: #64ab8f;
+  --source-positive: #50e650;
+  --source-quote: #57ac57;
+  --source-selection-bg: #4a89dc;
+  --source-selection-text: #fff;
+  --source-string: #d26b6b;
+  --source-string-2: #f50;
+  --source-tag: #7df46a;
+  --source-variable-2: #9fbad5;
+  --source-variable-3: #1cc685;
+
+  /* Typora standard CSS variables */
+  --active-file-bg-color:   var(--bg-sidebar-selection);
+  --active-file-text-color: var(--text-primary);
+  --item-hover-bg-color:    var(--bg-hover);
+  --item-hover-text-color:  var(--text-primary);
+  --md-char-color:          #48484a;
+  --meta-content-color:     #636366;
+  --primary-color:          var(--accent-blue);
+  --side-bar-bg-color:      var(--bg-sidebar);
+
+  /* Compatibility aliases for imported sidebar styles */
+  --background:             #282c34;
+  --bg-color:               #282c34;
+  --borders:                #334155;
+  --boxes:                  #1e293b;
+  --font-family:            -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --window-border:          1px solid #334155;
+  --search-hit-text-bg-color: #334155;
+  --search-hit-text-font-color: inherit;
+  --tw-button-hover-bg:     #1e293b;
+  --panel-border-color:     #475569;
+  --button-bg:              #334155;
+  --theme-500:              #94a3b8;
+  --theme-300:              #475569;
+  --theme-100:              #1e293b;
+  --theme-muted:            #22252b;
+  --select-text-bg-color:   #4f565f;
+  --sidebar-bg:             #22252b;
+  --sidebar-border:         #334155;
+  --sidebar-active-bg:      #282c34;
+  --sidebar-accent:         #4592e4;
+  --sidebar-text:           #abb2bf;
+  --menu-bg:                #181a1f;
+  --menu-border:            #334155;
+  --menu-text:              #d7dee7;
+  --menu-muted:             #6f7a87;
+  --menu-hover-bg:          #263141;
+  --menu-hover-text:        #f2f6fb;
+
+  /* Derived / UI effects */
+  --mark-bg: var(--accent-yellow);
+  --popover-box-shadow: 0 8px 32px #000;
+  --sidebar-menu-shadow: 4px 4px 20px rgba(0, 0, 0, 0.79);
+
+  /* Print */
+  --print-bg: #fff;
+  --print-code-bg: #f5f5f5;
+  --print-code-border: #ddd;
+  --print-code-text: #c7254e;
+  --print-h1-border: #f0c0c8;
+  --print-h1-color: #c0001a;
+  --print-h2-border: #c0d8f8;
+  --print-h2-color: #004fa3;
+  --print-h3-color: #007a9e;
+  --print-h4-color: #007a35;
+  --print-link: #0066cc;
+  --print-pre-bg: #f8f8f8;
+  --print-pre-border: var(--print-code-border);
+  --print-pre-text: #333;
+  --print-text: #111;
+}
+
+/* ── Reset ───────────────────────────────────────────────────── */
+html { font-size: 14px; }
+
+body {
+  font-family: var(--font-system);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.2;
+  color: var(--text-primary);
+  background: var(--bg-window);
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+/* ── Cursor ──────────────────────────────────────────────────── */
+#write,
+textarea {
+  caret-color: var(--cursor-color);
+}
+
+
+/* ── Editor ──────────────────────────────────────────────────── */
+content, .content-node, #content {
+  background: var(--bg-editor);
+}
+
+#write {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 16px 36px 60px;
+  background: var(--bg-editor);
+}
+
+/* No extra space above first element */
+#write > :first-child { margin-top: 0; }
+
+/* ── Sidebar ─────────────────────────────────────────────────── */
+#typora-sidebar {
+  background: var(--sidebar-bg);
+  border-right: var(--window-border);
+}
+
+.file-library-node,
+.file-tree-node {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* #typora-sidebar .file-library-node .file-node-content,
+#typora-sidebar .file-tree-node .file-node-content {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  display: flex;
+  align-items: center;
+  min-height: 1.9em;
+} */
+
+/* ── Toolbar ─────────────────────────────────────────────────── */
+header, .ty-toolbar, #ty-toolbar, .toolbar,
+#top-titlebar, .top-titlebar {
+  background: var(--bg-sidebar) !important;
+  border-bottom: 1px solid var(--border) !important;
+  color: var(--text-primary) !important;
+}
+
+#title-bar-title { color: var(--text-muted) !important; font-size: 0.85rem; }
+
+.sidebar-tab {
+  text-transform: none;
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+/* ── Headings ── colored for visual hierarchy ────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  margin-top: 0.45em;
+  margin-bottom: 0.45em;
+  padding-bottom: 0.2em;
+}
+
+h1 {
+  font-size: 1.85rem;
+  color: var(--h1-color);
+  border-bottom: 1px solid var(--h1-border);
+}
+
+h2 {
+  font-size: 1.35rem;
+  color: var(--h2-color);
+  border-bottom: 1px solid var(--h2-border);
+}
+
+h3 {
+  font-size: 1.12rem;
+  color: var(--h3-color);
+}
+
+h4 {
+  font-size: 1rem;
+  color: var(--h4-color);
+}
+
+h5 {
+  font-size: 0.88rem;
+  color: var(--h5-color);
+  font-weight: 500;
+}
+
+h6 {
+  font-size: 0.84rem;
+  color: var(--h6-color);
+  font-weight: 500;
+}
+
+/* Fold arrow / anchor */
+.header-wrapper .anchor { color: var(--text-dim) !important; opacity: 0.6; }
+
+/* ── Body Text ───────────────────────────────────────────────── */
+p { margin: 0 0 0.6em; color: var(--text-primary); }
+
+a, a:visited { color: var(--accent-blue); text-decoration: none; }
+a:hover { color: var(--accent-blue); text-decoration: underline; }
+
+strong { font-weight: 600; color: var(--text-primary); }
+em { color: var(--text-secondary); font-style: italic; }
+
+del { color: var(--text-dim); text-decoration: line-through; }
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2em 0;
+}
+
+/* ── Inline Code ─────────────────────────────────────────────── */
+code, tt {
+  font-family: var(--font-mono);
+  font-size: 0.84em;
+  background: var(--bg-code);
+  color: var(--accent-pink);
+  padding: 0.15em 0.42em;
+  border-radius: 4px;
+  border: 1px solid var(--border-light);
+  font-variant-ligatures: none;
+}
+
+/* ── Fenced Code Blocks ──────────────────────────────────────── */
+.md-fences,
+pre {
+  font-family: var(--font-mono) !important;
+  font-size: 13px !important;
+  background: var(--bg-code-block) !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  color: var(--text-code) !important;
+}
+
+.md-fences .CodeMirror,
+.md-fences .CodeMirror-scroll {
+  background: transparent !important;
+}
+
+pre code {
+  background: transparent; padding: 0;
+  border: none; color: inherit; font-size: inherit;
+}
+
+.md-fences-adv-panel, .md-fences-panel {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  color: var(--text-dim) !important;
+  font-size: 0.75rem !important;
+  font-family: var(--font-mono) !important;
+}
+
+/* ── CodeMirror (Source mode) ────────────────────────────────── */
+.CodeMirror {
+  background: var(--bg-code-block) !important;
+  color: var(--text-source) !important;
+  font-family: var(--font-mono) !important;
+  padding: 0.6em 0.8em !important;
+
+}
+
+.CodeMirror-selectedtext,
+.CodeMirror-selected { background: var(--source-selection-bg) !important; color: var(--source-selection-text) !important; text-shadow: none; }
+
+.CodeMirror-gutters { border-right: none; }
+
+.md-fences .CodeMirror-gutters {
+  border-right: 1px solid var(--border-light) !important;
+  background: transparent !important;
+}
+
+.md-fences .CodeMirror-linenumber {
+  color: var(--text-dim) !important;
+  font-family: var(--font-mono) !important;
+}
+
+.CodeMirror div.CodeMirror-cursor { border-left: 1px solid var(--source-cursor); z-index: 3; }
+
+/* Syntax */
+.cm-s-inner .cm-variable,
+.cm-s-inner .cm-operator,
+.cm-s-inner .cm-property  { color: var(--text-source); }
+.cm-s-inner .cm-keyword   { color: var(--source-keyword); }
+.cm-s-inner .cm-tag       { color: var(--source-tag); }
+.cm-s-inner .cm-attribute { color: var(--source-attribute); }
+.cm-s-inner .cm-string    { color: var(--source-string); }
+.cm-s-inner .cm-string-2  { color: var(--source-string-2); }
+.cm-s-inner .cm-comment,
+.cm-s-inner.cm-comment    { color: var(--source-comment); font-style: italic; }
+.cm-s-inner .cm-header,
+.cm-s-inner .cm-def,
+.cm-s-inner.cm-header,
+.cm-s-inner.cm-def        { color: var(--source-header); }
+.cm-s-inner .cm-quote,
+.cm-s-inner.cm-quote      { color: var(--source-quote); }
+.cm-s-inner .cm-hr        { color: var(--source-hr); }
+.cm-s-inner .cm-link      { color: var(--source-link); }
+.cm-s-inner .cm-negative  { color: var(--source-negative); }
+.cm-s-inner .cm-positive  { color: var(--source-positive); }
+.cm-s-inner .cm-meta,
+.cm-s-inner .cm-qualifier { color: var(--source-meta); }
+.cm-s-inner .cm-builtin   { color: var(--source-builtin); }
+.cm-s-inner .cm-bracket   { color: var(--source-bracket); }
+.cm-s-inner .cm-atom,
+.cm-s-inner.cm-atom       { color: var(--source-atom); }
+.cm-s-inner .cm-number    { color: var(--source-number); }
+.cm-s-inner .cm-variable-2 { color: var(--source-variable-2); }
+.cm-s-inner .cm-variable-3 { color: var(--source-variable-3); }
+
+/* ── Blockquote ──────────────────────────────────────────────── */
+blockquote {
+  margin: 1.1em 0;
+  padding: 0.7em 1.1em;
+  background: var(--bg-quote);
+  border-left: 3px solid var(--accent-blue);
+  border-radius: 0 6px 6px 0;
+  color: var(--text-secondary);
+}
+blockquote p { margin: 0; color: inherit; }
+
+/* ── Lists ───────────────────────────────────────────────────── */
+ul, ol {
+  padding-left: 2.1em;
+  margin-left: 0.2em;
+  margin: 0.1em 0 0.25em;
+}
+
+ul li::marker,
+ol li::marker {
+  color: var(--accent-blue);
+}
+
+li.md-task-list-item::marker {
+  color: transparent;
+}
+
+li {
+  margin: 0.07em 0;
+  padding-left: 0.12em;
+  color: var(--text-primary);
+}
+
+li > p { margin: 0.2em 0; }
+
+/* ── Task List — simple native-checkbox styling ────────── */
+input[type="checkbox"] { accent-color: auto; }
+
+li.md-task-list-item {
+  list-style-type: none !important;
+  padding-left: 0.2em !important;
+}
+
+li.md-task-list-item > input[type="checkbox"] {
+  margin-left: -1.2em !important;
+  margin-right: 0.3em !important;
+}
+
+ul.task-list,
+ol.task-list {
+  padding-left: 1.6em !important;
+  margin-left: 0.2em !important;
+}
+
+.md-task-list-item.task-list-done > p,
+li.md-task-list-item.task-list-done {
+  color: var(--text-dim) !important;
+  text-decoration: line-through;
+}
+
+/* ── Tables ──────────────────────────────────────────────────── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.2em 0;
+  font-size: 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead { background: var(--bg-secondary); }
+
+th {
+  padding: 0.6em 0.9em;
+  font-weight: 600;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+td {
+  padding: 0.55em 0.9em;
+  border-bottom: 1px solid var(--border-light);
+  color: var(--text-primary);
+}
+
+tr:last-child td       { border-bottom: none; }
+tr:nth-child(even) td  { background: var(--bg-table-alt); }
+
+/* ── Images ──────────────────────────────────────────────────── */
+img {
+  max-width: 100%;
+  border-radius: 6px;
+  border: 1px solid var(--border-light);
+}
+
+/* ── Selection ───────────────────────────────────────────────── */
+::selection      { background: var(--bg-selection); color: var(--text-primary); }
+::-moz-selection { background: var(--bg-selection); }
+.file-library-node ::selection,
+.file-tree-node ::selection {
+  background: transparent !important;
+}
+
+/* ── Inline extras ───────────────────────────────────────────── */
+mark {
+  background: var(--mark-bg);
+  color: var(--mark-text);
+  border-radius: 3px;
+  padding: 0.05em 0.2em;
+}
+
+kbd {
+  font-family: var(--font-system);
+  font-size: 0.78em;
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  border-bottom: 2px solid var(--border);
+  border-radius: 4px;
+  padding: 0.1em 0.4em;
+}
+
+/* ── Math / Diagrams ─────────────────────────────────────────── */
+.md-math-block, .md-rawblock, .md-diagram-panel {
+  background: var(--bg-code-block) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 6px;
+}
+
+/* ── Focus mode ──────────────────────────────────────────────── */
+.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) {
+  opacity: 0.28;
+}
+
+/* ── Dropdowns / Menus ───────────────────────────────────────── */
+.dropdown-menu,
+.context-menu,
+.popover,
+#ty-spell-check-panel {
+  background: var(--bg-popover);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: var(--popover-box-shadow);
+  padding: 0.25em 0;
+}
+
+.dropdown-item,
+.context-menu-item {
+  padding: 0.5em 1em;
+}
+
+.dropdown-item:hover,
+.context-menu-item:hover {
+  background: var(--bg-hover);
+}
+
+.dropdown-item.disabled,
+.context-menu-item.disabled,
+.dropdown-item[disabled],
+.context-menu-item[disabled] {
+  color: var(--text-muted);
+  cursor: default;
+}
+
+/* ── Modals / Prefs ──────────────────────────────────────────── */
+.modal-content, #pref-dialog {
+  background: var(--bg-window) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border) !important;
+}
+
+/* ── Footer ──────────────────────────────────────────────────── */
+footer, #footer, .ty-footer {
+  background: var(--bg-sidebar) !important;
+  border-top: 1px solid var(--border) !important;
+  color: var(--text-dim) !important;
+  font-size: 0.75rem;
+}
+
+/* ── Quick Open ──────────────────────────────────────────────── */
+.auto-suggest-container {
+  position: relative;
+  border: 1px solid var(--menu-border);
+  border-radius: 0.7rem;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.42);
+  background: linear-gradient(180deg, #1b1f26 0%, var(--menu-bg) 100%);
+  color: var(--menu-text);
+  overflow: hidden;
+  opacity: 1;
+  padding: 2px;
+}
+
+.auto-suggest-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07);
+  pointer-events: none;
+}
+
+#typora-quick-open {
+  background: var(--menu-bg);
+  border: 1px solid var(--menu-border);
+  border-radius: 0.5rem;
+  color: var(--menu-text);
+  padding: 0.34rem 0.36rem 0.72rem;
+}
+
+#typora-quick-open .typora-quick-open-list,
+#typora-quick-open .typora-quick-open-result,
+#typora-quick-open .typora-quick-open-item-container,
+#typora-quick-open .typora-quick-open-content {
+  background: var(--menu-bg);
+}
+
+#typora-quick-open .typora-quick-open-result,
+#typora-quick-open .typora-quick-open-item-container {
+  padding-bottom: 0.62rem;
+}
+
+#typora-quick-open input {
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom-color: rgba(255, 255, 255, 0.12);
+  color: var(--menu-text);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+#typora-quick-open input:focus {
+  border-color: rgba(69, 146, 228, 0.55);
+  box-shadow: 0 0 0 2px rgba(69, 146, 228, 0.18);
+}
+
+#typora-quick-open input::placeholder {
+  color: var(--menu-muted);
+}
+
+#typora-quick-open .typora-quick-open-title,
+#typora-quick-open .typora-quick-open-group-title,
+#typora-quick-open .menuitem-group-label {
+  color: var(--text-primary);
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+  background: rgba(255, 255, 255, 0.02);
+  letter-spacing: 0.01em;
+  font-weight: 800;
+  margin: 0.25rem 0 0.2rem;
+  padding: 0.32rem 0.45rem 0.12rem;
+}
+
+.typora-quick-open-item {
+  background-color: transparent;
+  color: var(--menu-text);
+  border: 1px solid transparent;
+  border-radius: 0.55rem;
+  margin: 0.16rem 0.42rem;
+  padding: 0.54rem 0.68rem 0.62rem;
+  min-height: 3.1rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.2rem;
+  overflow: visible;
+  box-sizing: border-box;
+  transition: background-color 0.14s ease, color 0.14s ease;
+}
+
+#typora-quick-open .typora-quick-open-item:last-child {
+  margin-bottom: 0.8rem;
+}
+
+#typora-quick-open .typora-quick-open-item > * {
+  line-height: 1.32;
+}
+
+#typora-quick-open .typora-quick-open-item > :first-child {
+  display: block;
+  line-height: 1.34;
+  padding-bottom: 0.02em;
+}
+
+#typora-quick-open .typora-quick-open-item-path,
+#typora-quick-open .typora-quick-open-item .path,
+#typora-quick-open .typora-quick-open-item .ty-path {
+  color: var(--menu-muted);
+  margin: 0.06rem 0 0;
+  font-size: 0.79em;
+  line-height: 1.34;
+  opacity: 1;
+  display: block;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  word-break: break-word;
+}
+
+#typora-quick-open .typora-quick-open-item > :last-child {
+  color: var(--menu-muted);
+  opacity: 1;
+}
+
+.typora-quick-open-item:hover {
+  background-color: rgba(69, 146, 228, 0.11);
+  border-color: rgba(69, 146, 228, 0.22);
+  color: var(--menu-hover-text);
+}
+
+#typora-quick-open .typora-quick-open-item.active {
+  background-color: rgba(69, 146, 228, 0.22);
+  border-color: rgba(69, 146, 228, 0.45);
+  color: var(--menu-hover-text);
+}
+
+#typora-quick-open .typora-quick-open-item.active:hover {
+  background-color: rgba(69, 146, 228, 0.22);
+}
+
+#typora-quick-open .typora-quick-open-item.active .typora-quick-open-item-path,
+#typora-quick-open .typora-quick-open-item.active .path,
+#typora-quick-open .typora-quick-open-item.active .ty-path {
+  color: var(--menu-text);
+}
+
+.md-search-hit {
+  color: var(--search-hit-text-font-color);
+  background-color: var(--search-hit-text-bg-color);
+}
+
+#md-searchpanel {
+  box-shadow: none;
+  filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
+}
+
+#md-searchpanel .btn:not(.close-btn):hover {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  background-color: var(--bg-hover);
+}
+
+#md-searchpanel input,
+#md-searchpanel .btn,
+#searchpanel-msg {
+  border-radius: 5px;
+}
+
+#searchpanel-msg {
+  color: var(--text-muted);
+  border-color: var(--border);
+  background: var(--bg-secondary);
+}
+
+.form-control {
+  border-color: var(--border);
+}
+
+.btn-default {
+  background-color: var(--bg-secondary);
+}
+
+/* ── Sidebar files menu ──────────────────────────────────────── */
+#sidebar-files-menu,
+#typora-sidebar #sidebar-files-menu {
+  border: 1px solid var(--menu-border);
+  border-radius: 0.65rem;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.42);
+  background: linear-gradient(180deg, #1b1f26 0%, var(--menu-bg) 100%);
+  color: var(--menu-text);
+  overflow: hidden;
+}
+
+#typora-sidebar #ty-sidebar-footer #sidebar-files-menu .menuitem-group-label {
+  color: var(--text-primary);
+  font-weight: 650;
+  letter-spacing: 0.01em;
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+#typora-sidebar #ty-sidebar-footer #sidebar-files-menu .menuitem-group-label:first-child {
+  border-top: none;
+  background: transparent;
+}
+
+#typora-sidebar #ty-sidebar-footer #sidebar-files-menu li,
+#typora-sidebar #ty-sidebar-footer #sidebar-files-menu li > a,
+#typora-sidebar #ty-sidebar-footer #sidebar-files-menu .file-action-item,
+#typora-sidebar #ty-sidebar-footer #sidebar-files-menu .footer-item {
+  color: var(--menu-text);
+}
+
+#typora-sidebar #ty-sidebar-footer #sidebar-files-menu li:hover {
+  background: transparent;
+}
+
+#typora-sidebar #ty-sidebar-footer #sidebar-files-menu li > a {
+  border-radius: 0.4rem;
+  transition: background-color 0.16s ease, color 0.16s ease;
+}
+
+#typora-sidebar #ty-sidebar-footer #sidebar-files-menu li > a:hover {
+  background: var(--menu-hover-bg);
+  color: var(--menu-hover-text);
+}
+
+#typora-sidebar #ty-sidebar-footer #sidebar-files-menu li.disabled,
+#typora-sidebar #ty-sidebar-footer #sidebar-files-menu li.disabled > a,
+#typora-sidebar #ty-sidebar-footer #sidebar-files-menu li > a[disabled] {
+  color: var(--menu-muted);
+  opacity: 0.65;
+}
+
+#typora-sidebar #ty-sidebar-footer #sidebar-files-menu .ty-side-sort-btn {
+  background-color: transparent;
+  color: var(--menu-text);
+  border: 1px solid transparent;
+  border-radius: 0.35rem;
+  transition: background-color 0.16s ease, color 0.16s ease, border-color 0.16s ease;
+}
+
+#typora-sidebar #ty-sidebar-footer #sidebar-files-menu .ty-side-sort-btn:hover {
+  background-color: var(--menu-hover-bg);
+  color: var(--menu-hover-text);
+}
+
+.sidebar-footer-item:hover,
+.footer-item:hover {
+  background: var(--accent-blue);
+}
+
+.ty-side-sort-btn.active,
+.ty-side-sort-btn:hover,
+.selected-folder-menu-item a:after {
+  color: var(--accent-blue);
+}
+
+#typora-sidebar #ty-sidebar-footer .sidebar-footer-item:hover {
+  background: var(--accent-blue);
+}
+
+#typora-sidebar #ty-sidebar-footer #sidebar-files-menu .show + .menuitem-group-label.show {
+  border-color: var(--border);
+}
+
+#typora-sidebar #ty-sidebar-footer #sidebar-files-menu li > a:hover {
+  background: var(--menu-hover-bg);
+}
+
+#typora-sidebar #ty-sidebar-footer #sidebar-files-menu .ty-side-sort-btn.active {
+  background: rgba(69, 146, 228, 0.22);
+  border-color: rgba(69, 146, 228, 0.45);
+  color: var(--sidebar-accent);
+}
+
+/* ── Enhanced Sidebar Theming (Ceylon-style) ────────────────── */
+#file-library-list[data-state="complete"] #sidebar-loading-template {
+  padding: 0;
+}
+
+#typora-sidebar .file-list-item,
+.ty-search-item {
+  border: none;
+  padding: 1rem;
+}
+
+body.html-for-mac #typora-sidebar .file-list-item,
+body.html-for-mac .ty-search-item {
+  transition-duration: 0.3s;
+  transition-property: background-color, border, color, height;
+}
+
+#typora-sidebar .file-list-item:hover,
+.ty-search-item:hover {
+  background: transparent;
+  color: var(--sidebar-accent);
+}
+
+#typora-sidebar .ty-search-item-line {
+  font-family: var(--font-family);
+  font-size: 0.8rem;
+  font-weight: 400;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  margin-left: 24px;
+}
+
+body.o #typora-sidebar .ty-search-item-line {
+  transition-duration: 0.2s;
+}
+
+#typora-sidebar .ty-search-item .ty-search-item-line:hover,
+#typora-sidebar .ty-search-item-line.active {
+  background-color: var(--select-text-bg-color);
+  color: #fff;
+}
+
+#typora-sidebar .file-list-item-file-name {
+  font-weight: 800;
+  font-size: 0.9rem;
+  margin-bottom: 0;
+  line-height: 1.8rem;
+  float: right;
+}
+
+#typora-sidebar .file-list-item-file-ext-part {
+  font-weight: 800;
+  opacity: 0.5;
+}
+
+#typora-sidebar .file-list-item-parent-loc,
+#typora-sidebar .file-list-item-time {
+  font-family: var(--font-family);
+  font-weight: 400;
+  opacity: 0.5;
+  display: block;
+}
+
+#typora-sidebar .file-list-item-summary {
+  float: left;
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+#typora-sidebar .file-list-item-count {
+  font-size: 0.75rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 0.2rem;
+  min-width: 1.25rem;
+  height: 1.25rem;
+  text-align: center;
+  line-height: 1.25rem;
+  position: relative;
+  top: 0.3rem;
+}
+
+#typora-sidebar input.file-list-item-file-name {
+  margin: 0.5rem 0 0.5rem 0.7rem;
+  padding: 0.4rem;
+  line-height: 1rem;
+  float: right;
+  border-radius: 0.3rem;
+  font-weight: 500;
+  background-color: var(--background);
+}
+
+#typora-sidebar .file-list-item.file-library-file-node {
+  border: none;
+}
+
+#typora-sidebar .file-tree-node.active .file-node-background,
+#typora-sidebar .file-list-item.active,
+#typora-sidebar .ty-search-item.active {
+  background-color: var(--background);
+  outline: 1px solid var(--borders);
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+  border-left: 3px solid var(--primary-color);
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+#typora-sidebar .file-tree-node.active .file-node-content {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+#typora-sidebar .file-tree-node {
+  padding: 0;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-left: 0.8rem;
+}
+
+#typora-sidebar .file-tree-node .file-node-content {
+  padding: 0;
+  line-height: 2.2rem;
+  height: 2.2rem;
+  background: none;
+  margin-bottom: 0;
+}
+
+#typora-sidebar .file-tree-node .file-node-background {
+  padding: 0;
+  height: 2.2rem;
+}
+
+#typora-sidebar .file-tree-node .file-node-icon {
+  margin-right: 0.5rem;
+}
+
+#typora-sidebar .file-tree-node .file-node-icon.fa-file-text-o {
+  margin-top: 0.33rem;
+}
+
+#typora-sidebar .file-tree-node .file-node-icon.fa-folder {
+  margin-top: 0.36rem;
+}
+
+#typora-sidebar .file-tree-node .fa-caret-down,
+#typora-sidebar .file-tree-node .fa-caret-right {
+  position: relative;
+  top: 5px;
+}
+
+#typora-sidebar .file-tree-node .file-tree-rename-input {
+  height: 2.2rem;
+  background: none;
+  border: none;
+  font-weight: 400;
+  margin: 0;
+  padding-left: 0;
+}
+
+#typora-sidebar .ty-search-item-collapse-icon {
+  top: 9px;
+}
+
+#typora-sidebar .file-tree-node.active > .file-node-background {
+  border: none;
+}
+
+.file-library-node:not(.file-node-root):focus > .file-node-content {
+  outline: none;
+}
+
+#typora-sidebar #sidebar-files-menu {
+  border-color: var(--menu-border);
+}
+
+#typora-sidebar #ty-sidebar-footer {
+  background-color: var(--bg-color);
+  border-top: solid 1px var(--borders);
+  font-weight: 500;
+}
+
+#typora-sidebar #ty-sidebar-footer li {
+  transition-duration: 0.2s;
+  transition-property: background-color, color;
+}
+
+#typora-sidebar #ty-sidebar-footer li:not(.file-sort-item):not(:first-child):not(.empty-menu-group):not(.folder-menu-group):hover {
+  color: var(--primary-color);
+  background-color: var(--boxes);
+}
+
+#typora-sidebar #ty-sidebar-footer .file-action-item.file-sort-item > span:first-of-type {
+  line-height: 2rem;
+}
+
+/* Folder + file icon replacements */
+#typora-sidebar .file-tree-node .file-node-icon {
+  font-size: 0;
+  width: 16px;
+  height: 16px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+#typora-sidebar .file-tree-node .file-node-icon.fa-folder {
+  background-image: url('./twister/icons/cd-dualtone-folder-closed.svg');
+  margin-top: 0.5rem;
+}
+
+#typora-sidebar .file-tree-node.file-node-collapsed > .file-node-content > .file-node-icon.fa-folder {
+  background-image: url('./twister/icons/cd-dualtone-folder-closed.svg');
+  margin-top: 0.5rem;
+}
+
+#typora-sidebar .file-tree-node.file-node-expanded > .file-node-content > .file-node-icon.fa-folder {
+  background-image: url('./twister/icons/cd-dualtone-folder-open.svg');
+  margin-top: 0.5rem;
+}
+
+#typora-sidebar .file-tree-node > .file-node-content > .file-node-icon.fa-file-text-o {
+  background-image: url('./twister/icons/cd-dualtone-file.svg');
+  margin-top: 0.5rem;
+}
+
+#typora-sidebar .file-tree-node.active > .file-node-content > .file-node-icon.fa-file-text-o {
+  background-image: url('./twister/icons/cd-dualtone-file-selected.svg');
+  margin-top: 0.5rem;
+}
+
+/* ── Exact Ceylon Sidebar Palette Override ──────────────────── */
+#typora-sidebar {
+  background: var(--sidebar-bg);
+  border-right: 1px solid var(--sidebar-border);
+}
+
+#typora-sidebar,
+#typora-sidebar .file-node-content,
+#typora-sidebar .file-list-item,
+#typora-sidebar .ty-search-item,
+#typora-sidebar .ty-search-item-line,
+#typora-sidebar .file-list-item-parent-loc,
+#typora-sidebar .file-list-item-time,
+#typora-sidebar .file-list-item-summary {
+  color: var(--sidebar-text);
+}
+
+#typora-sidebar .file-list-item:hover,
+#typora-sidebar .file-tree-node:hover > .file-node-content,
+#typora-sidebar .ty-search-item:hover {
+  background-color: transparent;
+  color: var(--sidebar-accent);
+}
+
+#typora-sidebar .file-list-item:hover .file-list-item-file-name,
+#typora-sidebar .file-list-item:hover .file-list-item-parent-loc,
+#typora-sidebar .file-list-item:hover .file-list-item-time,
+#typora-sidebar .file-tree-node:hover > .file-node-content .file-node-title,
+#typora-sidebar .ty-search-item:hover .ty-search-item-line {
+  color: var(--sidebar-accent);
+}
+
+#typora-sidebar .file-tree-node.active .file-node-background,
+#typora-sidebar .file-list-item.active,
+#typora-sidebar .ty-search-item.active {
+  background-color: var(--sidebar-active-bg);
+  outline: 1px solid var(--sidebar-border);
+  border-left: 3px solid var(--sidebar-accent);
+  color: var(--sidebar-accent);
+}
+
+#typora-sidebar .file-tree-node.active .file-node-content {
+  color: var(--sidebar-accent);
+  font-weight: 500;
+}
+
+#typora-sidebar .file-list-item-file-name,
+#typora-sidebar .file-list-item-file-ext-part {
+  font-weight: 800;
+}
+
+#typora-sidebar .file-list-item-parent-loc,
+#typora-sidebar .file-list-item-time {
+  font-family: var(--font-family);
+  opacity: 0.5;
+}
+
+#typora-sidebar .ty-search-item .ty-search-item-line:hover,
+#typora-sidebar .ty-search-item-line.active {
+  background-color: var(--select-text-bg-color);
+  color: #fff;
+}
+
+/* ── Print ───────────────────────────────────────────────────── */
+@media print {
+  body { background: var(--print-bg); color: var(--print-text); }
+  #write { padding: 0; }
+  h1 { color: var(--print-h1-color); border-color: var(--print-h1-border); }
+  h2 { color: var(--print-h2-color); border-color: var(--print-h2-border); }
+  h3 { color: var(--print-h3-color); }
+  h4 { color: var(--print-h4-color); }
+  a { color: var(--print-link); }
+  code, tt { background: var(--print-code-bg); color: var(--print-code-text); border-color: var(--print-code-border); }
+  pre, .md-fences { background: var(--print-pre-bg) !important; border-color: var(--print-pre-border) !important; color: var(--print-pre-text) !important; }
+}
