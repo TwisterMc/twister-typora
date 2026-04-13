@@ -42,6 +42,7 @@
   --h2-border: var(--h2-color);
 
   /* Text */
+  --text-color: var(--text-primary);
   --cursor-color: var(--accent-blue);
   --mark-text: #1a1a1a;
   --text-code: #e8e8ed;
@@ -683,6 +684,7 @@ footer,
   font-size: 0.75rem;
 }
 
+
 /* ── Quick Open ──────────────────────────────────────────────── */
 .auto-suggest-container {
   position: relative;
@@ -852,6 +854,10 @@ footer,
 #md-searchpanel .btn,
 #searchpanel-msg {
   border-radius: 5px;
+}
+
+#md-searchpanel input::placeholder {
+  color: var(--text-muted);
 }
 
 #searchpanel-msg {
@@ -1133,6 +1139,7 @@ body.o #typora-sidebar .ty-search-item-line {
   height: 2.2rem;
   background: none;
   border: none;
+  color: var(--text-primary);
   font-weight: 400;
   margin: 0;
   padding-left: 0;
