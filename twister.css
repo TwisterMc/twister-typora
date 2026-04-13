@@ -157,7 +157,7 @@ body {
   font-family: var(--font-system);
   font-weight: 400;
   font-size: 1rem;
-  line-height: 1.65;
+  line-height: 1.5;
   color: var(--text-primary);
   background: var(--bg-window);
   -webkit-font-smoothing: antialiased;
@@ -303,8 +303,8 @@ a:hover {
 }
 
 strong {
-  font-weight: 600;
-  color: var(--text-primary);
+  font-weight: 700;
+  color: #ffffff;
 }
 em {
   color: var(--text-secondary);
@@ -511,10 +511,12 @@ li {
   margin: 0.08em 0;
   padding-left: 0.12em;
   color: var(--text-primary);
+  line-height: 1.5;
 }
 
 li > p {
-  margin: 0.2em 0;
+  margin: 0;
+  line-height: 1.5;
 }
 
 /* ── Task List — simple native-checkbox styling ────────── */
