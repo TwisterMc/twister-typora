@@ -247,19 +247,19 @@ h6 {
 }
 
 h1 {
-  font-size: 1.85rem;
+  font-size: 1.375rem;
   color: var(--h1-color);
   border-bottom: 1px solid var(--h1-border);
 }
 
 h2 {
-  font-size: 1.35rem;
+  font-size: 1.125rem;
   color: var(--h2-color);
   border-bottom: 1px solid var(--h2-border);
 }
 
 h3 {
-  font-size: 1.12rem;
+  font-size: 1.0625rem;
   color: var(--h3-color);
 }
 
@@ -269,13 +269,13 @@ h4 {
 }
 
 h5 {
-  font-size: 0.88rem;
+  font-size: 1rem;
   color: var(--h5-color);
   font-weight: 500;
 }
 
 h6 {
-  font-size: 0.84rem;
+  font-size: 1rem;
   color: var(--h6-color);
   font-weight: 500;
 }
@@ -339,7 +339,7 @@ tt {
 .md-fences,
 pre {
   font-family: var(--font-mono) !important;
-  font-size: 13px !important;
+  font-size: 0.84rem !important;
   background: var(--bg-code-block) !important;
   border: none !important;
   outline: none !important;
