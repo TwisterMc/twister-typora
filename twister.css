@@ -1147,6 +1147,11 @@ body.o #typora-sidebar .ty-search-item-line {
   padding-left: 0;
 }
 
+#typora-sidebar .file-tree-node .file-tree-rename-input::selection {
+  background: var(--bg-selection) !important;
+  color: var(--text-primary);
+}
+
 #typora-sidebar .ty-search-item-collapse-icon {
   top: 9px;
 }
