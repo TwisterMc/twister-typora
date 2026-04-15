@@ -5,7 +5,7 @@
 :root {
   /* system-ui is first so the browser picks the OS default; fallbacks include both Apple and cross-platform families */
   --font-system:
-    system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI",
+    ui-monospace, system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI",
     "Helvetica Neue", Arial, sans-serif;
   --font-mono: "SF Mono", "Menlo", "Monaco", "Courier New", monospace;
   --monospace: var(--font-mono);
@@ -994,7 +994,7 @@ footer,
 #typora-sidebar .file-list-item,
 .ty-search-item {
   border: none;
-  padding: 0.35rem 0.9rem;
+  padding: 0.22rem 0.72rem;
 }
 
 body.html-for-mac #typora-sidebar .file-list-item,
@@ -1011,11 +1011,11 @@ body.html-for-mac .ty-search-item {
 
 #typora-sidebar .ty-search-item-line {
   font-family: var(--font-family);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 400;
-  padding: 0.3rem;
+  padding: 0.22rem 0.26rem;
   border-radius: 0.3rem;
-  margin-left: 24px;
+  margin-left: 20px;
 }
 
 body.o #typora-sidebar .ty-search-item-line {
@@ -1030,9 +1030,9 @@ body.o #typora-sidebar .ty-search-item-line {
 
 #typora-sidebar .file-list-item-file-name {
   font-weight: 400;
-  font-size: 0.875rem;
+  font-size: 0.82rem;
   margin-bottom: 0;
-  line-height: 1.4rem;
+  line-height: 1.2rem;
   float: right;
 }
 
@@ -1051,27 +1051,27 @@ body.o #typora-sidebar .ty-search-item-line {
 
 #typora-sidebar .file-list-item-summary {
   float: left;
-  font-size: 0.8rem;
+  font-size: 0.74rem;
   opacity: 0.9;
 }
 
 #typora-sidebar .file-list-item-count {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   background-color: var(--primary-color);
   color: #fff;
   border-radius: 0.2rem;
-  min-width: 1.25rem;
-  height: 1.25rem;
+  min-width: 1.1rem;
+  height: 1.1rem;
   text-align: center;
-  line-height: 1.25rem;
+  line-height: 1.1rem;
   position: relative;
-  top: 0.3rem;
+  top: 0.22rem;
 }
 
 #typora-sidebar input.file-list-item-file-name {
-  margin: 0.5rem 0 0.5rem 0.7rem;
-  padding: 0.4rem;
-  line-height: 1rem;
+  margin: 0.35rem 0 0.35rem 0.56rem;
+  padding: 0.28rem 0.34rem;
+  line-height: 0.92rem;
   float: right;
   border-radius: 0.3rem;
   font-weight: 500;
@@ -1103,39 +1103,46 @@ body.o #typora-sidebar .ty-search-item-line {
 #typora-sidebar .file-tree-node {
   padding: 0;
   font-weight: 400;
-  font-size: 0.84rem;
+  font-size: 0.8rem;
   margin-left: 0.5rem;
 }
 
 #typora-sidebar .file-tree-node .file-node-content {
   padding: 0;
-  line-height: 1.9rem;
-  height: 1.9rem;
+  line-height: 1.62rem;
+  height: 1.62rem;
+  display: flex;
+  align-items: center;
   background: none;
   margin-bottom: 0;
+  overflow: visible;
 }
 
 #typora-sidebar .file-tree-node .file-node-background {
   padding: 0;
-  height: 1.9rem;
+  height: 1.62rem;
+  overflow: visible;
 }
 
 #typora-sidebar .file-tree-node .file-node-icon {
-  margin-right: 0.5rem;
+  margin-right: 0.38rem;
+  position: relative;
+  top: 0;
+  overflow: visible;
 }
 
 #typora-sidebar .file-tree-node .file-node-icon.fa-file-text-o {
-  margin-top: 0.33rem;
+  margin-top: 0;
 }
 
 #typora-sidebar .file-tree-node .file-node-icon.fa-folder {
-  margin-top: 0.36rem;
+  margin-top: 0;
 }
 
 #typora-sidebar .file-tree-node .fa-caret-down,
 #typora-sidebar .file-tree-node .fa-caret-right {
   position: relative;
-  top: 5px;
+  top: 2px;
 }
 
 #typora-sidebar .file-tree-node .file-tree-rename-input {
@@ -1154,7 +1161,7 @@ body.o #typora-sidebar .ty-search-item-line {
 }
 
 #typora-sidebar .ty-search-item-collapse-icon {
-  top: 9px;
+  top: 7px;
 }
 
 #typora-sidebar .file-tree-node.active > .file-node-background {
@@ -1215,8 +1222,8 @@ body.o #typora-sidebar .ty-search-item-line {
 
 /* Folder: landscape SVG (22.5×18) — wider box so contain fills it properly */
 #typora-sidebar .file-tree-node .file-node-icon.fa-folder {
-  width: 18px;
-  height: 15px;
+  width: 15px;
+  height: 12px;
   -webkit-mask-image: url("./twister/icons/folder.svg");
   mask-image: url("./twister/icons/folder.svg");
 }
@@ -1244,8 +1251,8 @@ body.o #typora-sidebar .ty-search-item-line {
   .file-tree-node
   > .file-node-content
   > .file-node-icon.fa-file-text-o {
-  width: 12px;
-  height: 15px;
+  width: 9px;
+  height: 12px;
   -webkit-mask-image: url("./twister/icons/document.svg");
   mask-image: url("./twister/icons/document.svg");
 }
