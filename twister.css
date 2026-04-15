@@ -702,7 +702,7 @@ kbd {
   border: 1px solid var(--menu-border);
   border-radius: 0.5rem;
   color: var(--menu-text);
-  padding: 0.34rem 0.36rem 0.36rem;
+  padding: 0.22rem 0.24rem 0.24rem;
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -721,19 +721,19 @@ kbd {
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-bottom-color: rgba(255, 255, 255, 0.12);
   color: var(--menu-text);
-  border-radius: 0.5rem;
-  padding: 0.68rem 0.8rem;
+  border-radius: 0.4rem;
+  padding: 0.5rem 0.62rem;
 }
 
 #typora-quick-open .typora-quick-open-result {
-  background-color: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-bottom-color: rgba(255, 255, 255, 0.12);
+  background: transparent;
+  border: 0;
   color: var(--menu-text);
-  border-radius: 0.5rem;
-  padding: 0.08rem 0;
+  border-radius: 0;
+  padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow: visible;
+  height: auto !important;
 }
 
 #typora-quick-open input:focus {
@@ -753,22 +753,22 @@ kbd {
   background: rgba(255, 255, 255, 0.02);
   letter-spacing: 0.01em;
   font-weight: 800;
-  margin: 0.25rem 0 0.2rem;
-  padding: 0.32rem 0.45rem 0.12rem;
+  margin: 0.18rem 0 0.08rem;
+  padding: 0.24rem 0.35rem 0.08rem;
 }
 
 #typora-quick-open .typora-quick-open-item {
   background-color: transparent;
   color: var(--menu-text);
-  border: 1px solid transparent;
-  border-radius: 0.55rem;
-  margin: 0.12rem 0.32rem;
-  padding: 0.4rem 0.6rem;
-  height: auto;
+  border: 0;
+  border-radius: 0.3rem;
+  margin: 0;
+  padding: 0.24rem 0.38rem;
+  min-height: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 0.12rem;
+  line-height: 1.15;
   overflow: visible;
   box-sizing: border-box;
   transition:
@@ -781,8 +781,8 @@ kbd {
 #typora-quick-open .typora-quick-open-item .ty-path {
   color: var(--menu-muted);
   margin: 0.04rem 0 0;
-  font-size: 0.74em;
-  line-height: 1.24;
+  font-size: 0.68em;
+  line-height: 1.12;
   opacity: 1;
   display: block;
   white-space: nowrap;
@@ -796,21 +796,20 @@ kbd {
   opacity: 1;
 }
 
-/* Defensive: Typora may inject inline heights for result rows; let content define height. */
-#typora-quick-open .typora-quick-open-item[style*="height"] {
+/* Defensive: Typora may inject inline heights on both levels. */
+#typora-quick-open .typora-quick-open-item[style*="height"],
+#typora-quick-open .typora-quick-open-result[style*="height"] {
   height: auto !important;
   min-height: 0 !important;
 }
 
 #typora-quick-open .typora-quick-open-item:hover {
   background-color: rgba(69, 146, 228, 0.11);
-  border-color: rgba(69, 146, 228, 0.22);
   color: var(--menu-hover-text);
 }
 
 #typora-quick-open .typora-quick-open-item.active {
   background-color: rgba(69, 146, 228, 0.22);
-  border-color: rgba(69, 146, 228, 0.45);
   color: var(--menu-hover-text);
 }
 
