@@ -715,6 +715,8 @@ footer,
   border-radius: 0.5rem;
   color: var(--menu-text);
   padding: 0.34rem 0.36rem 0.72rem;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 #typora-quick-open .typora-quick-open-list,
@@ -722,6 +724,8 @@ footer,
 #typora-quick-open .typora-quick-open-item-container,
 #typora-quick-open .typora-quick-open-content {
   background: var(--menu-bg);
+  box-sizing: border-box;
+  width: 100%;
 }
 
 #typora-quick-open .typora-quick-open-result,
